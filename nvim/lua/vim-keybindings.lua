@@ -8,6 +8,13 @@ vim.keymap.set("n", "<leader>q", ":bd<CR>")
 vim.keymap.set("n", "<leader>s", ":w<CR>")
 
 
+-- indenting
+vim.keymap.set("n", ">", ">>")
+vim.keymap.set("n", "<", "<<")
+
+vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")
+
 -- split
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>h", ":split<CR>")
