@@ -9,11 +9,11 @@ vim.keymap.set("n", "<leader>s", ":w<CR>")
 
 
 -- indenting
-vim.keymap.set("n", ">", ">>")
-vim.keymap.set("n", "<", "<<")
+vim.keymap.set("n", ">", ">>llll")
+vim.keymap.set("n", "<", "<<hhhh")
 
-vim.keymap.set("v", ">", ">gv")
-vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gvllll")
+vim.keymap.set("v", "<", "<gvhhhh")
 
 -- split
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>")
@@ -26,3 +26,16 @@ vim.keymap.set("n", "<leader>h", ":split<CR>")
 -- code
 	-- python
 vim.api.nvim_set_keymap("n", "<leader>r", ":rightbelow vsplit | terminal python3 %<CR>", { noremap = true, silent = true })
+
+
+
+-- Preview
+vim.keymap.set("n", "<leader>V", ":MarkdownPreview<CR>")
+
+
+-- Markdown
+-- vim.keymap.set("n", "<CR>", ":/#<CR>zt")
+-- vim.keymap.set("n", "<BS>", ":?#<CR>zt")
+--
+
+

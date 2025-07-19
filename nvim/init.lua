@@ -7,9 +7,21 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 vim.keymap.set("n", "<C-Left>", ":vertical resize -5<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +5<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-Down>", ":resize -5<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-Up>", ":resize +5<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Up>", ":resize +4<CR>", { noremap = true, silent = true })
 
-vim.keymap.set("i", "jk", "<Esc>")
+
+
+
+-- Autosave
+-- vim.keymap.set("n", "j", "j:w<CR>")
+-- vim.keymap.set("n", "k", "k:w<CR>")
+-- vim.keymap.set("n", "h", "h:w<CR>")
+-- vim.keymap.set("n", "l", "l:w<CR>")
+vim.keymap.set("n", "dd", "dd:w<CR>")
+vim.keymap.set("n", "u", "u:w<CR>")
+
+
+vim.keymap.set("i", "jk", "<Esc>l:w<CR>")
 vim.keymap.set("i", "EE", "[]<Esc>i")
 vim.keymap.set("i", "BB", "{}<Esc>i")
 
@@ -76,3 +88,16 @@ vim.g.netrw_keepdir = 0
 --     end
 -- })
 --
+--
+vim.keymap.set("n", "<C-x>", ":Lazy<CR>")
+
+
+-- Markdown navigation 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "vimwiki",
+  callback = function()
+    vim.keymap.set("n", "<CR>", "/^#<CR>zt", { buffer = true, noremap = true, silent = true })
+    vim.keymap.set("n", "<BS>", "?^#<CR>zt", { buffer = true, noremap = true, silent = true })
+  end,
+})
+

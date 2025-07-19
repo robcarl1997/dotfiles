@@ -9,5 +9,7 @@ return {
                 vimwiki_global_ext = 0
             },
         }
+        vim.keymap.set("n", "<CR>", "/^#<CR>zt", { noremap = true, silent = true })
+
     end,
 }

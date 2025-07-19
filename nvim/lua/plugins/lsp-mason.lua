@@ -5,14 +5,14 @@ return{
 			require("mason").setup()
 		end
 	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-					ensure_installed = {"lua_ls", "bashls", "clangd", "pyright"}
-				})
-		end
-	},
+	-- {
+	-- 	"williamboman/mason-lspconfig.nvim",
+	-- 	config = function()
+	-- 		require("mason-lspconfig").setup({
+	-- 				ensure_installed = {"lua_ls", "bashls", "clangd", "pyright"},
+	-- 			})
+	-- 	end
+	-- },
 	{
 		-- h vim.lsp.buf -> get lsp functions
 		"neovim/nvim-lspconfig",
