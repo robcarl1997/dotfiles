@@ -11,6 +11,11 @@ set splitright
 set path+=**    " Search all subdirectories  
 set wildmenu    " Enable tab completion  
 set noshowmode
+set tags=./tags;,tags
+
+" Jump to definition USING CTAGS
+nmap gd <C-]>zt
+
 colorscheme pablo
 
 
