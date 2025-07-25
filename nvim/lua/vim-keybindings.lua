@@ -7,6 +7,10 @@ vim.keymap.set("n", "<leader>q", ":bd<CR>")
 -- save
 vim.keymap.set("n", "<leader>s", ":w<CR>")
 
+-- panes
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+
 
 -- indenting
 vim.keymap.set("n", ">", ">>llll")
